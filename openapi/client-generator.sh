@@ -72,7 +72,7 @@ kubeclient::generator::generate_client() {
     CLEANUP_DIRS_STRING="${CLEANUP_DIRS[@]}"
 
     echo "--- Running generator inside container..."
-    docker run -u $(id -u) \
+    docker run \
         -e CLEANUP_DIRS="${CLEANUP_DIRS_STRING}" \
         -e KUBERNETES_BRANCH="${KUBERNETES_BRANCH}" \
         -e CLIENT_VERSION="${CLIENT_VERSION}" \

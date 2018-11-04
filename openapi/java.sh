@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 # Copyright 2017 The Kubernetes Authors.
 #
